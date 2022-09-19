@@ -5,18 +5,21 @@
 // 5 -> 120
 
 Console.Clear();
-
-Console.WriteLine("Pls enter number: ");
+Console.WriteLine("Введите число");
 int num = int.Parse(Console.ReadLine());
+int number1 = Math.Abs(num);
 
-int Factorial(int fact) 
+int FacterialNum(int kol)
 {
-    int count = fact;
-    while (count > 1)
+    int i = 1;
+    int facte = 1;
+    while (i <= kol)
     {
-        count--;
-        fact *= count;
+        facte = i * facte;
+        i++;
+
     }
-    return fact;
+    return facte;
 }
-Console.WriteLine($"{num} -> {Factorial(num)}");
+
+Console.WriteLine($"{num} -> {FacterialNum(number1)}");
